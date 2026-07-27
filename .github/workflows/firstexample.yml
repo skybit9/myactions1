@@ -9,12 +9,12 @@ jobs:
 
         steps:
             - name: welcome message
-             run: echo "my first gh actions job"
+              run: echo "my first gh actions job"
 
-             
+
             - name: list files
-             run: ls
+              run: ls
         
 
             - name: read file
-             run: cat README.md
+              run: cat README.md
