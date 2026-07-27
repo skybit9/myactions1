@@ -8,17 +8,14 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+          - name: checkout repo
+            uses: actions/checkout@v7
+          - name: list and read files
+            run: |
+              echo "my first gh actions job"
+              ls -lta
+              cat README.md
+          - name: generate ascii artwork
+            run: cowsay -f dragon "Run for cover, I am a DRAGON......RAWR" >> dragon.txt 
+                
 
-            - name: checkout repo
-              uses: actions/checkout@v7
-              
-            - name: welcome message
-              run: echo "my first gh actions job"
-
-
-            - name: list files
-              run: ls
-        
-
-            - name: read file
-              run: cat README.md
