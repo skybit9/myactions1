@@ -4,20 +4,19 @@ on: push
 
 
 jobs:
-    ascii_job:
-        runs-on: ubuntu-latest
+ ascii_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v7
 
-        steps:
-          - name: checkout repo
-            uses: actions/checkout@v7
+    - name: list repo files
+      run: ls -lta          
 
-          - name: list repo files
-            run: ls -lta          
-
-          - name: execute shell script
-            run: |
-              chmod +x ascii-script.sh
-              ./ascii-script.sh
+    - name: execute shell script
+      run: |
+        chmod +x ascii-script.sh
+        ./ascii-script.sh
         
 
                 
